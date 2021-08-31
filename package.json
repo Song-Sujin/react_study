@@ -1,0 +1,34 @@
+{
+  "name": "number-baseball",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": "webpack serve --env development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Song-Sujin/react_study.git"
+  },
+  "author": "Sujin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Song-Sujin/react_study/issues"
+  },
+  "homepage": "https://github.com/Song-Sujin/react_study#readme",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "babel-loader": "^8.1.0",
+    "react-refresh": "^0.9.0",
+    "webpack": "^5.3.2",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^4.0.0"
+  }
+}
