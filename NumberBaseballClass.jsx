@@ -36,6 +36,7 @@ class NumberBaseball extends Component {
         answer: getNumbers(),
         tries: [],
       });
+      this.inputRef.focus();
     } else {
       // 답 틀렸으면
       const answerArray = value.split("").map((v) => parseInt(v));
@@ -52,6 +53,7 @@ class NumberBaseball extends Component {
           answer: getNumbers(),
           tries: [],
         });
+        this.inputRef.focus();
       } else {
         for (let i = 0; i < 4; i += 1) {
           if (answerArray[i] === answer[i]) {
@@ -67,6 +69,7 @@ class NumberBaseball extends Component {
             value: "",
           };
         });
+        this.inputRef.focus();
       }
     }
     console.log(value);
@@ -80,13 +83,19 @@ class NumberBaseball extends Component {
     });
   };
 
+  inputRef;
+
+  onInputRef = (c) => {
+    this.inputRef = c;
+  };
+
   render() {
     const { result, value, tries } = this.state;
     return (
       <>
         <h1>{result}</h1>
         <form onSubmit={this.onSubmitForm}>
-          <input maxLength={4} value={value} onChange={this.onChangeInput} />
+          <input ref={this.onInputRef} maxLength={4} value={value} onChange={this.onChangeInput} />
         </form>
         <div>시도: {tries.length}</div>
         <ul>
