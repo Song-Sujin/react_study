@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Try extends Component {
+class TryClass extends Component {
   render() {
     const { tryInfo } = this.props;
     return (
@@ -12,4 +12,4 @@ class Try extends Component {
   }
 }
 
-export default Try;
+export default TryClass;

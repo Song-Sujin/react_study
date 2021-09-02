@@ -1,5 +1,6 @@
 const path = require("path"); // node에서 경로를 쉽게 조작할 수 있도록 해주는 것. path 가져오는 것
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+//process.env.NODE_ENV = "production";
 
 module.exports = {
   name: "wordrelay-setting",

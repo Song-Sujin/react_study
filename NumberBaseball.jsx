@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Try from "./TryClass";
+import React, { useState, memo } from "react";
+import Try from "./Try";
 
 function getNumbers() {
   // 숫자 네 개를 겹치지 않고 랜덤하게 뽑는 함수
@@ -12,7 +12,7 @@ function getNumbers() {
   return array;
 }
 
-const NumberBaseball = () => {
+const NumberBaseball = memo(() => {
   const [result, setResult] = useState("");
   const [value, setValue] = useState("");
   const [answer, setAnswer] = useState(getNumbers());
@@ -79,6 +79,6 @@ const NumberBaseball = () => {
       </ul>
     </>
   );
-};
+});
 
 export default NumberBaseball; // import NumberBaseball;
