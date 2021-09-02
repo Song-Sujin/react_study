@@ -1,6 +1,11 @@
-import React, { PureComponent, memo } from "react";
+import React, { PureComponent, memo, useState } from "react";
 
 // class Try extends PureComponent {
+//   state = {
+//     result: this.props.result,
+//     try: this.props.try,
+//   };
+
 //   render() {
 //     const { tryInfo } = this.props;
 //     return (
