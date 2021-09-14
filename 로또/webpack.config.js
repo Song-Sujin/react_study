@@ -1,5 +1,5 @@
 const path = require("path"); // node에서 경로를 쉽게 조작할 수 있도록 해주는 것. path 가져오는 것
-const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+//const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 //process.env.NODE_ENV = "production";
 
 module.exports = {
@@ -35,15 +35,15 @@ module.exports = {
       },
     ],
   },
-  plugins: [new ReactRefreshWebpackPlugin()],
+  //plugins: [new ReactRefreshWebpackPlugin()],
   output: {
     path: path.join(__dirname, "dist"),
     filename: "[name].js",
-    publicPath: "/dist",
+    //publicPath: "/dist",
   },
-  devServer: {
-    devMiddleware: { publicPath: "/dist" },
-    static: { directory: path.resolve(__dirname) },
-    hot: true,
-  },
+  // devServer: {
+  //   devMiddleware: { publicPath: "/dist" },
+  //   static: { directory: path.resolve(__dirname) },
+  //   hot: true,
+  // },
 };
