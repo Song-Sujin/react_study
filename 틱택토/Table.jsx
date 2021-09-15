@@ -1,13 +1,13 @@
 import React from "react";
 import Tr from "./Tr";
 
-const Table = ({ onClick, tableData }) => {
+const Table = ({ onClick, tableData, dispatch }) => {
   return (
-    <table onClick={onClick}>
+    <table>
       {Array(tableData.length) //요소가 3인 배열을 각각 tr로 만들기
         .fill()
         .map((tr, i) => (
-          <Tr rowData={tableData[i]} />
+          <Tr dispatch={dispatch} rowIndex={i} rowData={tableData[i]} />
         ))}
     </table>
   );
